@@ -41,7 +41,6 @@ GEM
     jquery-rails (0.2.7)
       rails (~> 3.0)
       thor (~> 0.14.4)
-    kgio (2.3.3)
     linecache19 (0.5.12)
       ruby_core_source (>= 0.1.4)
     mail (2.2.15)
@@ -85,9 +84,6 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.26)
-    unicorn (3.5.0)
-      kgio (~> 2.3)
-      rack
 
 PLATFORMS
   ruby
@@ -98,4 +94,3 @@ DEPENDENCIES
   rails (= 3.0.6)
   ruby-debug19
   sqlite3
-  unicorn
