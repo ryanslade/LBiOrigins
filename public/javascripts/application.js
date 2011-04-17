@@ -47,10 +47,11 @@ function placeMarker(person)
 			return '<p class="'+className+'">'+text+'</p>';
 		},
 		
-		thisMarker = new google.maps.Marker({
+		thisMarker = new google.maps.Marker(
+		{
 			position: new google.maps.LatLng(latitude, longitude),
 			map: map,
-			icon: lbiMarker
+			animation: google.maps.Animation.DROP
 		}),
 		
 		infoWindow = new google.maps.InfoWindow({
