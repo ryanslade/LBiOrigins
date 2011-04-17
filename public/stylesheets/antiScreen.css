@@ -1,0 +1,22 @@
+/*
+Master CSS file
+Media: handheld for other phones
+*/
+
+/* Table of contents for this file
+-------------------------------------------
+Header
+*/
+
+/* Header
+----------------------------------------------------- */
+#header {
+	display: none !important;
+}
+.logo{
+	display: none !important;
+}
+h1{
+	display: none !important;
+}
+

@@ -1,0 +1,214 @@
+/*
+Master CSS file
+Media: screen
+*/
+
+/* Table of contents for this file
+-------------------------------------------
+Defaults
+Header
+Google Maps Building Blocks
+Info Window
+Add Origins Form
+
+*/
+
+
+/* Defaults
+----------------------------------------------------- */
+html{
+	height: 100%;
+}
+
+body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: arial, sans-serif;
+}
+h1{
+	color: #666;
+	font-size: 1.2em;
+	float: right;
+	margin: 0.8em 0 0 15px;
+	line-height: 1;
+}
+h2{
+	margin: 20px 0 0 0;
+}
+a{
+	color: #f00;
+	text-decoration: none;
+}
+a:hover{
+	color: #f00;
+	text-decoration: underline;
+}
+
+/*  Header
+----------------------------------------------------- */
+#header{
+	position: absolute;
+	top: 0;
+	padding: 20px;
+	left: 92px;
+	background: #fff;
+	background: rgba(255,255,255,0.8);
+	z-index: 10;
+}
+.logo{
+	margin: 0;
+	float: left;
+}
+.description{
+	float: right;
+	margin: 15px 0 0 30px;
+}
+#legend{
+	position: absolute;
+	bottom: 20px;
+	padding: 5px 10px;
+	left: 92px;
+	background: #fff;
+	background: rgba(255,255,255,0.8);
+	z-index: 10;
+}
+#legend p{
+	padding: 5px 0 7px 30px;
+	margin: 5px 0 -2px;
+}
+#lbi{
+	background: url("../images/media/redMarker.png") no-repeat top left;
+}
+#nonLbi{
+	background: url("../images/media/purpleMarker.png") no-repeat top left;
+}
+
+/* Google Maps Building Blocks
+----------------------------------------------------- */
+#map_canvas{
+	height: 100%;
+	width: 100%;
+}
+
+/* Info Window
+------------------------------------------------------ */
+.info-window{
+	height: 100%;
+}
+p.infoLabel{
+	font-size: 9pt;
+	padding: 0;
+	margin: 8px 0 0 0;
+	width: 300px;
+	color: #444;
+}
+div.lbi{
+	padding-left: 200px;
+}
+p.infoText{
+	margin: 0;
+	width: 300px;
+}
+div.info{
+	overflow: hidden;
+}
+img.emplImages{
+	width: 178px;
+	height: 178px;
+	display: block;
+	float: left;
+	position: absolute;
+	left: 0;
+}
+
+/* Add Origins Form
+------------------------------------------------------ */
+
+#form{
+	display: none;
+}
+#screen{
+	background: #000;
+	opacity: 0.3;
+	filter: alpha(opacity = 30);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 20;
+}
+form#new_person{
+	width: 500px;
+	background: #fff;
+	position: fixed;
+	top: 120px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	padding: 30px;
+	z-index: 100;
+	-moz-box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+	box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+}
+form#new_person input{
+	width: 200px;
+}
+a#close{
+	float: right;
+	clear: both;
+}
+textarea,input,label {
+	float: left;
+	clear: both;
+	margin: 2px 0 0 0;
+	font-family: arial, sans-serif;
+	font-size: 12pt;
+}
+label{
+	margin: 5px 0 0 0 !important;
+	font-size: 10pt !important;
+	color: #3C3C3C;
+}
+input#dataSubmit{
+	margin: 0 auto;
+	margin-top: 10px !important;
+	width: 50px;
+	display: block;
+	float: none !important;
+}
+div#radioGroup{
+	margin-top: 6px;
+	float: left;
+}
+label#yes input{
+	width: 30px !important;
+}
+
+label#no input{
+	width: 30px !important;
+}
+label#yes{
+	font-size: 12pt !important;
+	margin: 0 !important;
+}
+label#no{
+	font-size: 12pt !important;
+	margin: 0 !important;
+}
+textarea#interests{
+	width: 100%;
+	height: 100px;
+	margin-bottom: 10px;
+}
+#colLeft{
+	float: left;
+	width: 240px;
+}
+#colRight{
+	float: right;
+	width: 240px;
+}
+
