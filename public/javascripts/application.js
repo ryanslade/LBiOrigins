@@ -29,10 +29,8 @@ function parseJson()
     });
 }
 
-function placeMarker(row) 
-{	
-	var person = row.person
-	
+function placeMarker(person)
+{		
 	var latitude = person.latitude,
 		longitude = person.longitude,
 		lbiMarker = 'images/media/redMarker.png',
@@ -76,44 +74,9 @@ function processMarkers(data)
     var totalMarkers = data.length, i;
     for(i=0;i<totalMarkers;i+=1)
 	{
-		placeMarker(data[i]);
+		placeMarker(data[i].person);
 	}
 }
-
-function submitForm(){
-	$.ajax({
-		type: 'POST',
-        url: 'register.php',
-		data: {
-			first_name: $('#first_name').val(),
-			last_name: $('#last_name').val(),
-			birthTown: $('#birthTown').val(),
-			birthCountry: $('#birthCountry').val(),
-			interests: $('#interests').val(),
-			email: $('#email').val(),
-			company: $('#company').val(),
-			workedLBi: $('.workedLBi').val()
-		},
-		dataType: 'json',
-        success: function(data, b, c) {
-			
-			processMarkers(data);
-			
-			// hide the form
-			$('#form').css({
-				'display' : 'none'
-			});
-        }, 
-        error: function (data) {
-        }
-    });
-}
-	
-		 
-$('#dataInput').submit(function(){
-	submitForm();
-	return false;
-});
 
 // form showing and hiding
  $('#addOrigin').click(function(){
@@ -122,11 +85,11 @@ $('#dataInput').submit(function(){
 	});
 });
  
- $('#screen').click(function(){
+$('#screen').click(function(){
 	$('#form').css({
 		'display' : 'none'
 	});
- });
+});
  
 $('#close').click(function(){
 	$('#form').css({
@@ -134,4 +97,24 @@ $('#close').click(function(){
 	});
 });
 
-parseJson();
+$('#new_user').bind('ajax:success', function(){
+  alert("Success!");
+});
+
+function bindFormEvents()
+{
+  	// Example to show how to bind to ajax events
+	// Not currently used
+  	$('#new_person')
+	    .live("ajax:success", function(evt, xhr, settings)
+		{
+			$('#form').css({
+				'display' : 'none'
+			});
+		});
+}
+
+$(document).ready(function(){
+	parseJson();
+})
+

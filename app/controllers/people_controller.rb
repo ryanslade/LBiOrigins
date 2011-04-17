@@ -1,14 +1,13 @@
 class PeopleController < ApplicationController
+  respond_to :html, :js, :json
+  
   # GET /people
   # GET /people.xml
   def index
     @people = Person.all
     @person = Person.new
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json  { render :json => @people }
-    end
+    respond_with(@people)
   end
 
   # GET /people/1
@@ -43,15 +42,8 @@ class PeopleController < ApplicationController
   def create
     @person = Person.new(params[:person])
 
-    respond_to do |format|
-      if @person.save
-        format.html { redirect_to(@person, :notice => 'Person was successfully created.') }
-        format.json  { render :json => @person, :status => :created, :location => @person }
-      else
-        format.html { render :action => "new" }
-        format.json  { render :json => @person.errors, :status => :unprocessable_entity }
-      end
-    end
+    flash[:notice] = "Comment successfully created" if @person.save
+    respond_with(@person, :layout => !request.xhr?)
   end
 
   # PUT /people/1

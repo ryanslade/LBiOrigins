@@ -1,0 +1,29 @@
+var el = $('#new_person');
+
+<% if @person.errors.any? %>
+  // Create a list of errors
+  var errors = $('<ul />');
+
+  <% @person.errors.full_messages.each do |error| %>
+    errors.append('<li><%= escape_javascript( error ) %></li>');
+  <% end %>
+
+  // Display errors on form
+  el.find('.errors').html(errors);
+
+<% else %>
+
+	// Hide form
+	$('#form').css({
+		'display' : 'none'
+	});
+
+	// Clear form
+	el.find('input:text').val('');
+	el.find('.errors').empty();
+  	
+	var json = <%= raw @person.to_json %>;
+
+	placeMarker(json.person);
+	
+<% end %>
