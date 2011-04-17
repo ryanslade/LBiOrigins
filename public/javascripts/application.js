@@ -1,7 +1,7 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
-var latlng = new google.maps.LatLng(51.5001524, -0.1262362);
+var latlng = new google.maps.LatLng(30,0);
 
 var myOptions = {
   zoom: 3,
