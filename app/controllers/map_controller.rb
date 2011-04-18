@@ -1,7 +1,7 @@
 class MapController < ApplicationController
   
+  # GET /map
   def index
-    @people = Person.all
     @person = Person.new
 
     respond_to do |format|
