@@ -1,4 +1,7 @@
-<%= form_for(@person) do |f| %>
+<%= form_for(@person, :remote => true) do |f| %>
+  <a id="close" href="#">Close</a>
+  <div class="errors"></div>
+	
   <% if @person.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
@@ -26,14 +29,6 @@
   <div class="field">
     <%= f.label :home_country %><br />
     <%= f.text_field :home_country %>
-  </div>
-  <div class="field">
-    <%= f.label :longitude %><br />
-    <%= f.text_field :longitude %>
-  </div>
-  <div class="field">
-    <%= f.label :latitude %><br />
-    <%= f.text_field :latitude %>
   </div>
   <div class="actions">
     <%= f.submit %>
