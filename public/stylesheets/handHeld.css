@@ -124,7 +124,7 @@ img.emplImages{
 	bottom: 0;
 	z-index: 20;
 }
-form#dataInput{
+form#new_person{
 	width: 500px;
 	background: #fff;
 	position: fixed;
@@ -138,14 +138,14 @@ form#dataInput{
 	-webkit-box-shadow: 0 5px 30px rgba(0,0,0,0.3);
 	box-shadow: 0 5px 30px rgba(0,0,0,0.3);
 }
-form#dataInput input{
+form#new_person input,select{
 	width: 200px;
 }
 a#close{
 	float: right;
 	clear: both;
 }
-textarea,input,label {
+textarea,input,label,select {
 	float: left;
 	clear: both;
 	margin: 2px 0 0 0;
@@ -157,36 +157,12 @@ label{
 	font-size: 10pt !important;
 	color: #3C3C3C;
 }
-input#dataSubmit{
+input#person_submit{
 	margin: 0 auto;
 	margin-top: 10px !important;
 	width: 50px;
 	display: block;
 	float: none !important;
-}
-
-div#radioGroup{
-	margin-top: 6px;
-	float: left;
-}
-label#yes input{
-	width: 30px !important;
-}
-label#no input{
-	width: 30px !important;
-}
-label#yes{
-	font-size: 12pt !important;
-	margin: 0 !important;
-}
-label#no{
-	font-size: 12pt !important;
-	margin: 0 !important;
-}
-textarea#interests{
-	width: 100%;
-	height: 100px;
-	margin-bottom: 10px;
 }
 #colLeft{
 	float: left;
