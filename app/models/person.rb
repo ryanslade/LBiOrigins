@@ -1,5 +1,7 @@
 class Person < ActiveRecord::Base
   
+  belongs_to :department
+  
   validates_presence_of :first_name, :last_name, :home_town, :home_country, :latitude, :longitude
   
   before_validation :geocode_if_neccesary
