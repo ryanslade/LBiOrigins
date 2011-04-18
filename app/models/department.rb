@@ -4,4 +4,8 @@ class Department < ActiveRecord::Base
   
   validates_presence_of :name
   
+  def self.dropdown_options
+    self.order(:name).select("name, id").collect { |d| [d.name, d.id] }
+  end
+  
 end

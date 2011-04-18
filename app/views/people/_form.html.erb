@@ -35,6 +35,10 @@
     <%= f.label :latitude %><br />
     <%= f.text_field :latitude %>
   </div>
+  <div class="field">
+    <%= f.label :department_id %><br />
+    <%= f.select :department_id, Department.dropdown_options %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
