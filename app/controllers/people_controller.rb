@@ -1,4 +1,6 @@
 class PeopleController < ApplicationController
+  before_filter :check_is_admin, :except => [:create]
+  
   respond_to :html, :js, :json
   
   # GET /people
@@ -73,4 +75,5 @@ class PeopleController < ApplicationController
       format.json  { head :ok }
     end
   end
+  
 end
