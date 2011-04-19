@@ -9,4 +9,12 @@ class MapController < ApplicationController
     end
   end
   
+  def people
+     @people = Person.all
+
+      respond_to do |format|
+        format.json  { render :json => @people.to_json(:include => :department) }
+      end
+  end
+  
 end

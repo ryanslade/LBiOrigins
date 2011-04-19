@@ -1,13 +1,19 @@
 LBiOrigins::Application.routes.draw do
   resources :departments
-
   resources :people
+
+  resources :map do
+    collection do
+      get 'people'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
-  match 'map' => 'map#index'
+  #   match 'products/:id' => 'catalog#view'    
+  
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:

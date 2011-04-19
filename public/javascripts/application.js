@@ -17,7 +17,7 @@ var panels = [];
 function parseJson()
 {
     $.ajax({
-        url: '/people.json',
+        url: '/map/people.json',
         dataType: 'json',
         success: function(data) 
 		{
@@ -58,7 +58,9 @@ function placeMarker(person)
 			content: 
 				p('Name', labelClass) + p(combinedName, textClass) + 
 				p('Birth place', labelClass) +
-				p(person.home_town+', '+person.home_country, textClass)
+				p(person.home_town+', '+person.home_country, textClass) +
+				p('Department', labelClass) +
+				p(person.department.name, textClass)
 		});
 		
 	panels.push(infoWindow);
