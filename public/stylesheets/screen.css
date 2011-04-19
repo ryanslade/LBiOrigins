@@ -90,14 +90,6 @@ p.infoText{
 div.info{
 	overflow: hidden;
 }
-img.emplImages{
-	width: 178px;
-	height: 178px;
-	display: block;
-	float: left;
-	position: absolute;
-	left: 0;
-}
 
 /* Add Origins Form
 ------------------------------------------------------ */
@@ -164,4 +156,3 @@ input#person_submit{
 	float: right;
 	width: 240px;
 }
-

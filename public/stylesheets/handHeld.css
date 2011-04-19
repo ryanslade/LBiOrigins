@@ -77,14 +77,6 @@ p.infoText{
 div.info{
 	overflow: hidden;
 }
-img.emplImages{
-	width: 100px;
-	height: 100px;
-	display: block;
-	float: left;
-	position: absolute;
-	left: 0;
-}
 
 /* Form - Currently out of action 
 ------------------------------------------------------ */
