@@ -31,9 +31,6 @@ body{
 #header {
 	display: none !important;
 }
-.logo{
-	display: none !important;
-}
 h1{
 	display: none !important;
 }
@@ -44,25 +41,6 @@ a{
 a:hover{
 	color: #f00;
 	text-decoration: underline;
-}
-#legend{
-	position: absolute;
-	bottom: 20px;
-	padding: 5px 10px;
-	left: 92px;
-	background: #fff;
-	background: rgba(255,255,255,0.8);
-	z-index: 10;
-}
-#legend p{
-	padding: 5px 0 7px 30px;
-	margin: 5px 0 -2px;
-}
-#lbi{
-	background: url("images/media/redMarker.png") no-repeat top left;
-}
-#nonLbi{
-	background: url("images/media/purpleMarker.png") no-repeat top left;
 }
 
 /* Google Maps Building Blocks
