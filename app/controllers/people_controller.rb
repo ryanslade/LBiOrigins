@@ -6,8 +6,7 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.xml
   def index
-    @people = Person.all
-    @person = Person.new
+    @people = Person.order("last_name, first_name")
 
     respond_with(@people)
   end
@@ -17,10 +16,7 @@ class PeopleController < ApplicationController
   def show
     @person = Person.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json  { render :json => @person }
-    end
+    respond_with(@person)
   end
 
   # GET /people/new
@@ -28,10 +24,7 @@ class PeopleController < ApplicationController
   def new
     @person = Person.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json  { render :json => @person }
-    end
+    respond_with(@person)
   end
 
   # GET /people/1/edit
