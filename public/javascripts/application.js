@@ -33,8 +33,6 @@ function placeMarker(person)
 {		
 	var latitude = person.latitude,
 		longitude = person.longitude,
-		lbiMarker = 'images/media/redMarker.png',
-		nonLbiMarker = 'images/media/purpleMarker.png',
 	
 		first_name = person.first_name,
 		last_name = person.last_name,
@@ -43,25 +41,25 @@ function placeMarker(person)
 		labelClass = 'infoLabel',
 		textClass = 'infoText',
 		
-		p = function (text, className) {
-			return '<p class="'+className+'">'+text+'</p>';
-		},
-		
-		thisMarker = new google.maps.Marker(
-		{
-			position: new google.maps.LatLng(latitude, longitude),
-			map: map,
-			animation: google.maps.Animation.DROP
-		}),
-		
-		infoWindow = new google.maps.InfoWindow({
-			content: 
-				p('Name', labelClass) + p(combinedName, textClass) + 
-				p('Birth place', labelClass) +
-				p(person.home_town+', '+person.home_country, textClass) +
-				p('Department', labelClass) +
-				p(person.department.name, textClass)
-		});
+	p = function (text, className) {
+		return '<p class="'+className+'">'+text+'</p>';
+	},
+	
+	thisMarker = new google.maps.Marker(
+	{
+		position: new google.maps.LatLng(latitude, longitude),
+		map: map,
+		animation: google.maps.Animation.DROP
+	}),
+	
+	infoWindow = new google.maps.InfoWindow({
+		content: 
+			p('Name', labelClass) + p(combinedName, textClass) + 
+			p('Birth place', labelClass) +
+			p(person.home_town+', '+person.home_country, textClass) +
+			p('Department', labelClass) +
+			p(person.department.name, textClass)
+	});
 		
 	panels.push(infoWindow);
 	google.maps.event.addListener(thisMarker, 'click', function(){

@@ -2,11 +2,12 @@ var el = $('#new_person');
 
 <% if @person.errors.any? %>
   // Create a list of errors
-  var errors = $('<ul />');
+  var errors = $('<ul>');
 
   <% @person.errors.full_messages.each do |error| %>
     errors.append('<li><%= escape_javascript( error ) %></li>');
   <% end %>
+  errors.append("</ul>")
 
   // Display errors on form
   el.find('.errors').html(errors);
@@ -22,7 +23,7 @@ var el = $('#new_person');
 	el.find('input:text').val('');
 	el.find('.errors').empty();
   	
-	var json = <%= raw @person.to_json %>;
+	var json = <%= raw @person.to_json(:include => :department) %>;
 
 	placeMarker(json.person);
 	
