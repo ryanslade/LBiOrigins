@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   ADMIN_USER = "admin"
-  ADMIN_PASSWORD = "Or1g1ns"
+  ADMIN_PASSWORD =  ENV["admin_password"]
   
   private
   
