@@ -23,3 +23,7 @@ group :development, :test do
    #gem 'webrat'
    gem 'ruby-debug19', :require => 'ruby-debug'
 end
+
+group :production do
+  gem "thin" # Thin required to work on CloudFoundry
+end
