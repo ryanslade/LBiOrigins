@@ -14,10 +14,10 @@ class Person < ActiveRecord::Base
   
   def geocode
     address = "#{home_town}, #{home_country}"
-    result = GoogleMaps.geocode(address)
+    location = GoogleMaps.geocode(address)
     
-    if result
-      self.latitude, self.longitude = result[:lat], result[:lng]
+    if location
+      self.latitude, self.longitude = location[:lat], location[:lng]
       
       # If another user has the same location, randomise by a small amount
       # so their pin's dont cover each other
