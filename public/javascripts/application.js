@@ -37,6 +37,8 @@ function placeMarker(person)
 
     labelClass = 'infoLabel',
     textClass = 'infoText',
+    redMarker = '/images/redMarker.png',
+    blueMarker = '/images/blueMarker.png',
 
     p = function(text, className) {
         return '<p class="' + className + '">' + text + '</p>';
@@ -46,7 +48,8 @@ function placeMarker(person)
     {
         position: new google.maps.LatLng(latitude, longitude),
         map: map,
-        animation: google.maps.Animation.DROP
+        animation: google.maps.Animation.DROP,
+        icon: person.alumni ? blueMarker : redMarker 
     }),
 
     infoWindow = new google.maps.InfoWindow({

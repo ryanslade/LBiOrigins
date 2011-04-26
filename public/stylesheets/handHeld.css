@@ -42,6 +42,28 @@ a:hover{
 	color: #f00;
 	text-decoration: underline;
 }
+#legend{
+	position: absolute;
+	bottom: 20px;
+	padding: 5px 10px;
+	left: 92px;
+	background: #fff;
+	background: rgba(255,255,255,0.8);
+	z-index: 10;
+}
+
+#legend p{
+	padding: 5px 0 7px 30px;
+	margin: 5px 0 -2px;
+}
+
+#lbi{
+	background: url("/images/redMarker.png") no-repeat top left;
+}
+
+#alumni{
+	background: url("/images/blueMarker.png") no-repeat top left;
+}
 
 /* Google Maps Building Blocks
 ----------------------------------------------------- */

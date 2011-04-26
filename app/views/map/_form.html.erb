@@ -22,6 +22,10 @@
     <%= f.label :department_id %><br />
     <%= f.collection_select(:department_id, Department.alphabetical, :id, :name, :prompt => true) %>
   </div>
+  <div class="field">
+    <%= f.label :alumni %><br />
+    <%= f.check_box (:alumni) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
